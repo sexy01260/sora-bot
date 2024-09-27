@@ -22,7 +22,7 @@ const getRandomInt = (min, max) => Math.floor(Math.random() * (max - Math.ceil(m
 
 const randomMessage = (msgList) => msgList[getRandomInt(0, msgList.length)];
 
-const replies = ["그래.", "맞아.", "어.", "아니.", "안돼.", "안.돼."];
+const replies = ["닥쳐.", "진행시켜!.", "영~차.", "겠냐?.", "꺼져 돌아가.", "안돼.꺼져"];
 
 const { Client, GatewayIntentBits, codeBlock } = require('discord.js');
 const client = new Client({
@@ -51,7 +51,7 @@ client.on('messageCreate', message => {
     if (content.endsWith('?')) {
         message.reply(randomMessage(replies));
     } else {
-        message.reply('다시 한 번 물어봐.');
+        message.reply('다시 한 번 지꺼려봐.');
     }
 });
 
